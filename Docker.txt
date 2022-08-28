@@ -1,0 +1,40 @@
+docker inspect bc3665960198 | grep IPAddress - вывод инф по нужному параметру
+
+docker stop stupefied_khayyam
+docker kill
+ 
+docker exec -it 1a6344fd369c bash -- запустить дополнительный процесс внуттри запущеного контеинера
+
+docker run -d --name my_nginx nginx
+
+docker run -p 8080:80 nginx --  мепинг портов(подмена)
+
+docker run \
+-v ${PWD}:/usr/share/nginx/html \
+-p 8080:80 \
+nginx 
+мепинг томов 
+docker run -v /d/Репозитории/HTML/project1:/usr/share/nginx/html -p 8080:80 nginx
+
+
+
+
+docker run \
+	--name my_web \
+	-v ${PWD}:/usr/share/nginx/html \
+	-p 8888:80 \
+	-d \
+	--rm \
+	nginx
+
+
+docker build . -t my-calendar 
+
+docker exec -it 3b724dff2084 sh - попасть в файловую систему контейнера
+
+docker run -it --name my-node-app my-file-writter 
+
+docker-compose up -d -- подготовка контеинеров(создание)
+docker-compose down -- остановка и удаление контеинеров и сети 
+docker-compose up -d --build -- перезаписание предидущих контеинероввы
+docker logs a06e81b324fc -- вывести список логов
